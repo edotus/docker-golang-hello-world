@@ -47,7 +47,7 @@ spec:
       dnsPolicy: ClusterFirst
       securityContext: {}
       imagePullSecrets:
-        - name: codefresh-generated-r.cfcr.io-cfcr-{{KUBERNETES_NAMESPACE}}
+        - name: codefresh-generated-r.cfcr.io-cfcr-setup
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
