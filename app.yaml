@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: golang
-          image: r.cfcr.io/{{CF_ACCOUNT}}/otus/uaa:{{CF_REVISION}}
+          image: r.cfcr.io/eearleyotus/edotus/dockergolanghelloworld:master
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
