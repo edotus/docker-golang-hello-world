@@ -34,20 +34,20 @@ spec:
     spec:
       containers:
         - name: golang
-          image: 'r.cfcr.io/eearleyotus/edotus/dockergolanghelloworld:master'
+          image: r.cfcr.io/{{CF_ACCOUNT}}/otus/uaa:{{CF_REVISION}}
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-          imagePullPolicy: Always
       restartPolicy: Always
       terminationGracePeriodSeconds: 40
       dnsPolicy: ClusterFirst
       securityContext: {}
       imagePullSecrets:
-        - name: codefresh-generated-r.cfcr.io-cfcr-setup
+        - name: codefresh-generated-r.cfcr.io-cfcr-{{KUBERNETES_NAMESPACE}}
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
