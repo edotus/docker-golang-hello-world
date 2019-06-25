@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: golang
+  name: golang-service
 spec:
   ports:
     - name: http1
